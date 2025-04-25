@@ -1,0 +1,64 @@
+  {
+   "sigma": {
+        "value": 0.2,
+        "description": "Reciprocal of the average incubation period"
+    },
+
+    "gamma": {
+        "value": 0.4,
+        "description": "Recovery proportion"
+    },
+
+     "delta": {
+        "value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9
+        ],
+        "description": "Age dependent symptomatic rate"
+    },
+
+    "psi": {
+    "value": 0.4,
+    "description": "Rate of exit from isolation"
+
+    },
+
+    "epsilon_a": {
+        "value": 0.5,
+        "description": "Relative infectiousness of asymptomatic relative to a clinical case"
+    },
+
+    "epsilon_d": {
+        "value": 1.0,
+        "description": "Relative reduction in infectiousness of clinical cases after they developed symptoms"
+
+
+    },
+
+    "tau0": {
+      "value": 0.5,
+      "description": "Initial isolation rate"
+
+    },
+
+    "capacity": {
+      "value": 1000,
+      "description": "Health system capacity"
+    }
+
+}
