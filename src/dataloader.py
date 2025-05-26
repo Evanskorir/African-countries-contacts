@@ -1,18 +1,10 @@
 import json
 
 import numpy as np
-import pandas as pd
 import xlrd
 
 
 class DataLoader:
-    """
-    The DataLoader object manages getting all data necessary for simulation
-
-    Member variables:
-        *._data_file     Data file paths
-        *._data          Loaded data
-    """
     def __init__(self):
         """
         Constructor that defines file paths and loads all data

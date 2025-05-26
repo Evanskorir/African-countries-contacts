@@ -1,10 +1,9 @@
-from src.dataloader import DataLoader
+from src.pipeline import PipelineManager
 
 
 def main():
-    data = DataLoader()
-    print(data.contact_data)
-
+    pipeline = PipelineManager()
+    pipeline.run()
 
 
 if __name__ == "__main__":
