@@ -71,7 +71,7 @@ class Plotter:
     def plot_ordered_distance_matrix(self, dt, columns):
         """Plot reordered distance matrix with better visuals."""
         fig, ax = plt.subplots(figsize=(34, 34), dpi=300)
-        cax = ax.imshow(dt, cmap="jet", vmin=0)
+        cax = ax.imshow(dt, cmap="magma", vmin=0)
 
         # Axis ticks only on bottom and left
         ax.set_xticks(np.arange(len(columns)))
@@ -131,7 +131,6 @@ class Plotter:
 
         inverse_name_mapping = {v: k for k, v in mapped_names.items()}
 
-        # ✅ Filter African countries ONLY for plotting
         relevant_names = set(mapped_names.values()).union({"Western Sahara"})
         africa_map = africa_map[africa_map["name"].isin(relevant_names)].copy()
         africa_map["label_name"] = africa_map["name"].map(lambda x:
@@ -429,11 +428,11 @@ class Plotter:
                         cb.ax.yaxis.set_ticks_position('right')
                         cb.ax.tick_params(labelsize=12, width=0.6, length=3)
 
-                    ax.set_title(f"{country}", fontsize=16,
-                                 fontweight="bold", pad=10)
+                    # ax.set_title(f"{country}", fontsize=16, fontweight="bold", pad=10)
+                    ax.set_title(f"{name}", fontsize=16, fontweight="bold", pad=10)
                     ax.set_xlabel("Respondent age", fontsize=10)
                     ax.set_ylabel("Contact age", fontsize=10)
-                    ax.set_xticklabels(labels, rotation=45, ha='center', fontsize=8)
+                    ax.set_xticklabels(labels, rotation=90, ha='center', fontsize=8)
                     ax.set_yticklabels(labels, fontsize=8)
                     ax.tick_params(length=3, width=1)
 

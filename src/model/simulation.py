@@ -58,7 +58,7 @@ class Simulation:
             beta_r0 = self.base_r0 / r0_current
 
             beta_min = max(0.0001, beta_r0 * 0.2)
-            beta_max = beta_r0 * 2.5
+            beta_max = beta_r0 * self.base_r0
             best_beta = None
 
             for beta in np.linspace(beta_min, beta_max, 80):

@@ -1,7 +1,7 @@
 import numpy as np
+from src.apvd import APVDReduction
 from src.dataloader import DataLoader
 from src.model.simulation import Simulation
-from src.apvd import APVDReduction
 
 
 class ContactMatrixScaling:
