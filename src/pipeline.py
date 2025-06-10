@@ -15,7 +15,7 @@ class PipelineManager:
 
         # Configuration parameters
         self.base_r0 = 3.68
-        self.base_on = "deaths"
+        self.base_on = "deaths"  # ("r0", "infected", "peak", "hospital", "icu")
         self.base_frac = 0.0005
         self.susc = 1.0
         self.threshold = 0.15
